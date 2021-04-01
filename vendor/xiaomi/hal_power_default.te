@@ -1,4 +1,5 @@
 type vendor_power_prop, property_type;
+typeattribute hal_power_default mlstrustedsubject;
 
 allow hal_power_default sysfs_touchpanel:dir search;
 allow hal_power_default sysfs_touchpanel:file rw_file_perms;
@@ -17,6 +18,10 @@ allow hal_power_default sysfs_kgsl:lnk_file rw_file_perms;
 
 # To dump
 allow hal_power_default cgroup:file r_file_perms;
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
 
 # To get/set powerhal state property
 set_prop(hal_power_default, vendor_power_prop)
