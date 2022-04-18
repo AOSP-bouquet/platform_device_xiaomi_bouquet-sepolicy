@@ -33,6 +33,9 @@
 # Power
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.xiaomi_bouquet-libperfmgr               u:object_r:hal_power_default_exec:s0
 
+# Radio init
+/(vendor|system/vendor)/bin/init\.radio\.sh     u:object_r:init_radio_exec:s0
+
 # Thermal
 /data/vendor/thermal(/.*)?                      u:object_r:thermal_data_file:s0
 
