@@ -1,6 +1,9 @@
 # Biometric
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.bouquet   u:object_r:hal_fingerprint_bouquet_exec:s0
 
+# Cust (Metadata)
+/dev/block/platform/soc/c0c4000.sdhci/by-name/cust                                    u:object_r:persist_block_device:s0
+
 # Fingerprint
 /data/gf_data(/.*)?                             u:object_r:fingerprintd_data_file:s0
 /data/vendor/fpc(/.*)?                          u:object_r:fingerprint_vendor_data_file:s0
