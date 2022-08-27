@@ -24,38 +24,18 @@ dontaudit untrusted_app_all sysfs_net:dir search;
 # target API level < Q.
 dontaudit untrusted_app ashmem_device:chr_file open;
 
-userdebug_or_eng('
- allow {
-  adpl
-  cnd
-  hal_audio_default
-  hal_bluetooth_qti
-  hal_graphics_composer_default
-  hal_imsrtp
-  hal_rcsservice
-  hal_sensors_default
-  ims
-  netmgrd
-  qti
-  rild
-  sensors
-  vendor_dpmd
- } diag_device:chr_file rw_file_perms;
-')
-
 dontaudit {
   adpl
   cnd
   hal_audio_default
   hal_bluetooth_qti
   hal_graphics_composer_default
-  hal_imsrtp
-  hal_rcsservice
   hal_sensors_default
-  ims
   netmgrd
   qti
   rild
   sensors
   vendor_dpmd
+  hal_imsrtp
+  hal_rcsservice
 } diag_device:chr_file rw_file_perms;
