@@ -31,7 +31,7 @@
 /dev/spidev7.1                                  u:object_r:spidev_device:s0
 
 # Light HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.bouquet                     u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.bouquet                     u:object_r:hal_light_default_exec:s0
 
 # Persist
 /persist(/.*)?                                  u:object_r:mnt_vendor_file:s0
